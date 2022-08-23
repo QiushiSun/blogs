@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>DaSE Cloud Computing Lecture2 - Qiushi&#039;s Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="Qiushi&#039;s Blog"><meta name="msapplication-TileImage" content="/img/favicon.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Qiushi&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="云计算应用与开发：云计算背后的技术"><meta property="og:type" content="blog"><meta property="og:title" content="DaSE Cloud Computing Lecture2"><meta property="og:url" content="http://qiushisun.github.io/2020/10/19/DaSE-Cloud-Computing%20Lec2/"><meta property="og:site_name" content="Qiushi&#039;s Blog"><meta property="og:description" content="云计算应用与开发：云计算背后的技术"><meta property="og:locale" content="en_US"><meta property="og:image" content="http://qiushisun.github.io/gallery/Data-Center-Structure.png"><meta property="article:published_time" content="2020-10-19T10:23:37.000Z"><meta property="article:modified_time" content="2022-07-04T15:45:58.000Z"><meta property="article:author" content="Qiushi Sun"><meta property="article:tag" content="cloud-computing"><meta property="article:tag" content="DaSE@ECNU"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="http://qiushisun.github.io/gallery/Data-Center-Structure.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://qiushisun.github.io/2020/10/19/DaSE-Cloud-Computing%20Lec2/"},"headline":"DaSE Cloud Computing Lecture2","image":["http://qiushisun.github.io/gallery/Data-Center-Structure.png"],"datePublished":"2020-10-19T10:23:37.000Z","dateModified":"2022-07-04T15:45:58.000Z","author":{"@type":"Person","name":"Qiushi Sun"},"publisher":{"@type":"Organization","name":"Qiushi's Blog","logo":{"@type":"ImageObject","url":"http://qiushisun.github.io/img/logo.png"}},"description":"云计算应用与开发：云计算背后的技术"}</script><link rel="canonical" href="http://qiushisun.github.io/2020/10/19/DaSE-Cloud-Computing%20Lec2/"><link rel="icon" href="/img/favicon.png"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+
+          const $tabMenu = document.querySelector(`a[href="${location.hash}"]`);
+          if (!$tabMenu) {
+            return;
+          }
+
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
+
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+          const $activeTab = document.querySelector(location.hash);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.2.0"></head><body class="is-3-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.png" alt="Qiushi&#039;s Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/QiushiSun"><i class="fab fa-github"></i></a><a class="navbar-item search" title="Search" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><div class="card"><div class="card-image"><span class="image is-7by3"><img class="fill" src="/gallery/Data-Center-Structure.png" alt="DaSE Cloud Computing Lecture2"></span></div><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2020-10-19T10:23:37.000Z" title="10/19/2020, 6:23:37 PM">2020-10-19</time></span><span class="level-item"><a class="link-muted" href="/categories/DaSE-ECNU/">DaSE@ECNU</a><span> / </span><a class="link-muted" href="/categories/DaSE-ECNU/cloud-computing/">cloud-computing</a></span><span class="level-item">10 minutes read (About 1432 words)</span></div></div><h1 class="title is-3 is-size-4-mobile">DaSE Cloud Computing Lecture2</h1><div class="content"><p>云计算应用与开发：云计算背后的技术</p>
+<span id="more"></span>
+
+<h2 id="2020Fall-云计算应用与开发"><a href="#2020Fall-云计算应用与开发" class="headerlink" title="2020Fall 云计算应用与开发"></a>2020Fall 云计算应用与开发</h2><h3 id="Lecture-1-Supplementary-Videos"><a href="#Lecture-1-Supplementary-Videos" class="headerlink" title="Lecture 1 Supplementary Videos"></a>Lecture 1 Supplementary Videos</h3><p>Google Data Center: <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=X-0V6bYfTpA">https://www.youtube.com/watch?v=X-0V6bYfTpA</a></p>
+<p>Microsoft Azure Data Center: <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=yfF3pOzdmlE">https://www.youtube.com/watch?v=yfF3pOzdmlE</a></p>
+<hr>
+<h3 id="Lecture2-云计算背后的技术-Part1"><a href="#Lecture2-云计算背后的技术-Part1" class="headerlink" title="Lecture2 云计算背后的技术-Part1"></a>Lecture2 云计算背后的技术-Part1</h3><ol>
+<li>数据中心（Data Center）的概念：容纳计算机系统及其相关组件（如通信系统和存储系统）的一组建筑物</li>
+<li>最早的数据中心：ENIAC（1940s），重三十吨，占地达167$m^2$</li>
+<li>90年代末大型公司搭建互联网数据中心（Internet Data Center）</li>
+<li>云数据中心（Internet Data Center）：2010s</li>
+</ol>
+<hr>
+<h4 id="数据中心与云计算"><a href="#数据中心与云计算" class="headerlink" title="数据中心与云计算"></a>数据中心与云计算</h4><h5 id="云计算基础设施"><a href="#云计算基础设施" class="headerlink" title="云计算基础设施"></a>云计算基础设施</h5><ol>
+<li>在不同地理区域建立冗余数据中心保证高可靠和高可用</li>
+<li>客户不需要维护本地的数据中心，转而使用IaaS，PaaS，Serverless，SaaS</li>
+</ol>
+<p>（预计2021年，全球95%的数据中心将会是云计算数据中心）</p>
+<hr>
+<h4 id="数据中心的组成"><a href="#数据中心的组成" class="headerlink" title="数据中心的组成"></a>数据中心的组成</h4><ol>
+<li>服务器大厅：用于计算，存储和网络设备</li>
+<li>冷却场：包含冷却塔和冷却器</li>
+<li>电力场：发电机和配电中心</li>
+<li>消防系统和安保系统</li>
+</ol>
+<p><img src="/gallery/Data-Center-Structure.png" title="Data-Center-Structure"></p>
+<ol>
+<li><p>数据中心中的永久性数据一般放置在storage里面，临时数据可以放在Rack&#x2F;Servers上</p>
+</li>
+<li><p>采用N+1冗余，即要N个部件工作的一个系统，额外加一个防止出现意外，完全冗余需要2n+1</p>
+</li>
+</ol>
+<hr>
+<h4 id="数据中心的能耗"><a href="#数据中心的能耗" class="headerlink" title="数据中心的能耗"></a>数据中心的能耗</h4><ol>
+<li>数据中心一般常年维持20摄氏度，否则会出现宕机，过热等故障</li>
+<li>IT设备和制冷系统消耗大量电能，一次Google搜索会排放7g $CO_2$，两次Google搜索产生的热量可以煮沸一壶水</li>
+</ol>
+<h5 id="能源效率"><a href="#能源效率" class="headerlink" title="能源效率"></a>能源效率</h5><ol>
+<li>概念：PUE(Power Usage Effectiveness)&#x3D; 数据中心全部能耗&#x2F;IT设备能耗，用于衡量冷却、照明等非IT设备的开销比率</li>
+<li>理想情况下PUE&#x3D;1（显然是不可能做到的），美国数据中心平均PUE&#x3D;2</li>
+<li>PUE&#x3D;1.2即被认为是”Energy Effective Data Center”</li>
+</ol>
+<h5 id="可持数据中心（利用可再生资源（太阳能，风能，潮汐能等））"><a href="#可持数据中心（利用可再生资源（太阳能，风能，潮汐能等））" class="headerlink" title="可持数据中心（利用可再生资源（太阳能，风能，潮汐能等））"></a>可持数据中心（利用可再生资源（太阳能，风能，潮汐能等））</h5><ol>
+<li>Azure部署水下数据中心</li>
+<li>Facebook在北极圈附近部署数据中心</li>
+<li>阿里千岛湖数据中心</li>
+</ol>
+<hr>
+<h4 id="云计算与虚拟化（云计算依赖虚拟化技术）"><a href="#云计算与虚拟化（云计算依赖虚拟化技术）" class="headerlink" title="云计算与虚拟化（云计算依赖虚拟化技术）"></a>云计算与虚拟化（云计算依赖虚拟化技术）</h4><p>虚拟化是什么$\rightarrow$看操作系统</p>
+<h5 id="为什么要虚拟化"><a href="#为什么要虚拟化" class="headerlink" title="为什么要虚拟化"></a>为什么要虚拟化</h5><ol>
+<li>降低成本（大型主机 Vs. 多台小型主机）</li>
+<li>高灵活性（管理多台虚拟机 Vs. 管理多台物理主机）</li>
+<li>高敏捷性（虚拟机迁移 Vs. 物理主机迁移）</li>
+<li>容错能力强（虚拟节点失效 Vs. 物理节点失效）</li>
+</ol>
+<p>AWS使用ECS(Elastic Container Service)，Azure使用Nested Virtualization</p>
+<hr>
+<h4 id="多租户技术（Multitenancy）"><a href="#多租户技术（Multitenancy）" class="headerlink" title="多租户技术（Multitenancy）"></a>多租户技术（Multitenancy）</h4><p>多租户技术指的是一种软件架构，使得同一个应用程序可以同时服务多个独立的租户（一个租户通常包括一群权限共享的用户），不同租户享有专用的数据、配置和功能等等</p>
+<h5 id="多租户技术显著的的一个好处：app维护的时候一次性维护就够了（易维护）"><a href="#多租户技术显著的的一个好处：app维护的时候一次性维护就够了（易维护）" class="headerlink" title="多租户技术显著的的一个好处：app维护的时候一次性维护就够了（易维护）"></a>多租户技术显著的的一个好处：app维护的时候一次性维护就够了（易维护）</h5><h5 id="多租户技术的优点："><a href="#多租户技术的优点：" class="headerlink" title="多租户技术的优点："></a>多租户技术的优点：</h5><ol>
+<li>节约成本（资源池化）</li>
+<li>快速启动（不为单独一个租户启动一个应用）</li>
+<li>高可扩展性（有限的资源支持更多的租户）</li>
+<li>安全性（数据加密、访问控制、多重验证等）</li>
+<li>易维护性（一次维护、更新或升级服务所有租户）</li>
+</ol>
+<p>多租户系统可以在不同层实现:</p>
+<ol>
+<li>应用层：隔离不同租户的应用程序环境（应用的不同进程隔离，进程的不同线程隔离）</li>
+<li>系统层：计算资源的隔离（虚拟机、虚拟网络）</li>
+<li>数据层：使用不同的方法将不同租户的数据隔离</li>
+</ol>
+<hr>
+<h4 id="分布式系统（云本质上是一个分布式系统）"><a href="#分布式系统（云本质上是一个分布式系统）" class="headerlink" title="分布式系统（云本质上是一个分布式系统）"></a>分布式系统（云本质上是一个分布式系统）</h4><p>不同计算机利用网络互联，通过消息传递沟通并协同完成任务的系统（电信网络，基于网络的应用，实时处理系统。各种并行计算系统）</p>
+<ol>
+<li><p>云通过网络连接</p>
+</li>
+<li><p>不同功能的服务器互相传递消息、协同工作</p>
+<p>• 客户端与服务器传递消息、使用服务</p>
+<p>• 不同客户端互相传递消息、共享服务</p>
+</li>
+</ol>
+<h5 id="分布式系统的特性与云计算"><a href="#分布式系统的特性与云计算" class="headerlink" title="分布式系统的特性与云计算"></a>分布式系统的特性与云计算</h5><p>你会知道系统中某台计算机崩溃了，但是你的软件确永远不会。</p>
+<p>​                                                                                     ——乔治·库鲁里斯</p>
+<ol>
+<li>容错性：单一的故障不会影响整个系统的正常运行，比如冗余、故障恢复。（高可靠&amp;高可用）</li>
+<li>高可扩展性：自由对节点或功能进行扩充（弹性伸缩）</li>
+<li>并发：多台机器同时访问同一数据</li>
+<li>透明性：用户无需了解分布式系统内部结构</li>
+</ol>
+<h5 id="分布式计算（Distributed-Computing）："><a href="#分布式计算（Distributed-Computing）：" class="headerlink" title="分布式计算（Distributed Computing）："></a>分布式计算（Distributed Computing）：</h5><h5 id="分布式存储（Distributed-data-store）："><a href="#分布式存储（Distributed-data-store）：" class="headerlink" title="分布式存储（Distributed data store）："></a>分布式存储（Distributed data store）：</h5><p>通过网络接连将数据存储在多个计算机节点上，通常用一种复制（多副本）的方式。</p>
+<h5 id="分布式资源管理（-Distributed-Resource-Scheduling-）："><a href="#分布式资源管理（-Distributed-Resource-Scheduling-）：" class="headerlink" title="分布式资源管理（ Distributed Resource Scheduling ）："></a>分布式资源管理（ Distributed Resource Scheduling ）：</h5><p>集群管理&#x2F;容器管理</p>
+<hr>
+<h4 id="重复：云计算的三大核心技术："><a href="#重复：云计算的三大核心技术：" class="headerlink" title="重复：云计算的三大核心技术："></a>重复：云计算的三大核心技术：</h4><ol>
+<li>数据中心</li>
+<li>虚拟化</li>
+<li>多租户</li>
+</ol>
+</div><div class="article-licensing box"><div class="licensing-title"><p>DaSE Cloud Computing Lecture2</p><p><a href="http://qiushisun.github.io/2020/10/19/DaSE-Cloud-Computing Lec2/">http://qiushisun.github.io/2020/10/19/DaSE-Cloud-Computing Lec2/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>Author</h6><p>Qiushi Sun</p></div></div><div class="level-item is-narrow"><div><h6>Posted on</h6><p>2020-10-19</p></div></div><div class="level-item is-narrow"><div><h6>Updated on</h6><p>2022-07-04</p></div></div><div class="level-item is-narrow"><div><h6>Licensed under</h6><p><a class="icons" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="icon fab fa-creative-commons"></i></a><a class="icons" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="icon fab fa-creative-commons-by"></i></a><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/cloud-computing/">cloud-computing</a><a class="link-muted mr-2" rel="tag" href="/tags/DaSE-ECNU/">DaSE@ECNU</a></div><div class="sharethis-inline-share-buttons"></div><script src="thomasqiushi@icloud.com" defer></script></article></div><div class="card"><div class="card-content"><h3 class="menu-label has-text-centered">Like this article? Support the author with</h3><div class="buttons is-centered"><a class="button donate" href="/" target="_blank" rel="noopener" data-type="afdian"><span class="icon is-small"><i class="fas fa-charging-station"></i></span><span>Afdian.net</span></a><a class="button donate" data-type="alipay"><span class="icon is-small"><i class="fab fa-alipay"></i></span><span>Alipay</span><span class="qrcode"><img src="/" alt="Alipay"></span></a><a class="button donate" href="/" target="_blank" rel="noopener" data-type="buymeacoffee"><span class="icon is-small"><i class="fas fa-coffee"></i></span><span>Buy me a coffee</span></a><a class="button donate" href="/" target="_blank" rel="noopener" data-type="patreon"><span class="icon is-small"><i class="fab fa-patreon"></i></span><span>Patreon</span></a><a class="button donate" data-type="paypal" onclick="document.getElementById(&#039;paypal-donate-form&#039;).submit()"><span class="icon is-small"><i class="fab fa-paypal"></i></span><span>Paypal</span></a><form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" rel="noopener" id="paypal-donate-form"><input type="hidden" name="cmd" value="_donations"><input type="hidden" name="business" value="thomasqiushi@icloud.com"><input type="hidden" name="currency_code" value="USD"></form><a class="button donate" data-type="wechat"><span class="icon is-small"><i class="fab fa-weixin"></i></span><span>Wechat</span><span class="qrcode"><img src="/" alt="Wechat"></span></a></div></div></div><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2020/10/20/DaSE-Cloud-Computing%20Lec3/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">Cloud-Computing Lecture3</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2020/10/16/DaSE-Cloud-Computing%20Lec1/"><span class="level-item">DaSE Cloud Computing Lecture1</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><div class="column column-left is-4-tablet is-4-desktop is-3-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="/img/avatar.png" alt="Qiushi Sun"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">Qiushi Sun</p><p class="is-size-6 is-block">A Naive Data Scientist</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Shanghai/Singapore</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">Posts</p><a href="/archives"><p class="title">25</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Categories</p><a href="/categories"><p class="title">12</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Tags</p><a href="/tags"><p class="title">14</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/QiushiSun" target="_blank" rel="noopener">Follow</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/QiushiSun"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Zhihu" href="https://www.zhihu.com/people/sun-qiu-shi-60"><i class="fab fa-zhihu"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Academic Homepage" href="https://twitter.com"><i class="fab fa-anchor"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="LinkedIn" href="https://www.linkedin.com/in/qiushi-sun/"><i class="fab fa-github-alt"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/"><i class="fas fa-rss"></i></a></div></div></div><!--!--><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">Links</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li><li><a class="level is-mobile" href="https://bulma.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Bulma</span></span><span class="level-right"><span class="level-item tag">bulma.io</span></span></a></li><li><a class="level is-mobile" href="https://qkgoalkeeper.github.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Kun Qian</span></span><span class="level-right"><span class="level-item tag">qkgoalkeeper.github.io</span></span></a></li><li><a class="level is-mobile" href="http://dase.ecnu.edu.cn/" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">DaSE@ECNU</span></span><span class="level-right"><span class="level-item tag">dase.ecnu.edu.cn</span></span></a></li></ul></div></div></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">Categories</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/Blog/"><span class="level-start"><span class="level-item">Blog</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/DaSE-ECNU/"><span class="level-start"><span class="level-item">DaSE@ECNU</span></span><span class="level-end"><span class="level-item tag">6</span></span></a><ul><li><a class="level is-mobile" href="/categories/DaSE-ECNU/cloud-computing/"><span class="level-start"><span class="level-item">cloud-computing</span></span><span class="level-end"><span class="level-item tag">6</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/ML-System/"><span class="level-start"><span class="level-item">ML-System</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/Multimodality/"><span class="level-start"><span class="level-item">Multimodality</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/NLP/"><span class="level-start"><span class="level-item">NLP</span></span><span class="level-end"><span class="level-item tag">5</span></span></a><ul><li><a class="level is-mobile" href="/categories/NLP/CodeRep/"><span class="level-start"><span class="level-item">CodeRep</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/Research/"><span class="level-start"><span class="level-item">Research</span></span><span class="level-end"><span class="level-item tag">3</span></span></a><ul><li><a class="level is-mobile" href="/categories/Research/Writing/"><span class="level-start"><span class="level-item">Writing</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/TeX/"><span class="level-start"><span class="level-item">TeX</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/categories/misc/"><span class="level-start"><span class="level-item">misc</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/research/"><span class="level-start"><span class="level-item">research</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">Tags</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/Blog/"><span class="tag">Blog</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/CodeRep/"><span class="tag">CodeRep</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/DaSE-ECNU/"><span class="tag">DaSE@ECNU</span><span class="tag">6</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Interpretability/"><span class="tag">Interpretability</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ML-System/"><span class="tag">ML-System</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Multimodality/"><span class="tag">Multimodality</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/PTMs/"><span class="tag">PTMs</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/TeX/"><span class="tag">TeX</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Transformer/"><span class="tag">Transformer</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/blog/"><span class="tag">blog</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/cloud-computing/"><span class="tag">cloud-computing</span><span class="tag">6</span></a></div><div class="control"><a class="tags has-addons" href="/tags/misc/"><span class="tag">misc</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/research/"><span class="tag">research</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/writing/"><span class="tag">writing</span><span class="tag">3</span></a></div></div></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">Subscribe for updates</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="Subscribe"></div></div></form></div></div></div><div class="column-right-shadow is-hidden-widescreen"></div></div><div class="column column-right is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only order-3"><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">Recents</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-08-23T09:16:28.000Z">2022-08-23</time></p><p class="title"><a href="/2022/08/23/2022-8-23-MacSetup/">2022-8-23-MacSetup</a></p></div></article><article class="media"><figure class="media-left"><a class="image" href="/2022/08/19/2022-8-19-Probing-CodePTMs/"><img src="/gallery/2022-8-19-Probing-CodePTMs/syntax-understanding.png" alt="论文导读：Probing Pretrained Models of Source Code"></a></figure><div class="media-content"><p class="date"><time dateTime="2022-08-19T11:39:17.000Z">2022-08-19</time></p><p class="title"><a href="/2022/08/19/2022-8-19-Probing-CodePTMs/">论文导读：Probing Pretrained Models of Source Code</a></p><p class="categories"><a href="/categories/NLP/">NLP</a> / <a href="/categories/NLP/CodeRep/">CodeRep</a></p></div></article><article class="media"><figure class="media-left"><a class="image" href="/2022/08/18/2022-8-17-Code-Transformer/"><img src="/gallery/2022-8-17-Code-Transformer/code-transformer-logo.png" alt="论文导读：Code Transformer"></a></figure><div class="media-content"><p class="date"><time dateTime="2022-08-18T15:57:13.000Z">2022-08-18</time></p><p class="title"><a href="/2022/08/18/2022-8-17-Code-Transformer/">论文导读：Code Transformer</a></p><p class="categories"><a href="/categories/NLP/">NLP</a> / <a href="/categories/NLP/CodeRep/">CodeRep</a></p></div></article><article class="media"><figure class="media-left"><a class="image" href="/2022/08/11/2022-8-10-ViLT/"><img src="/gallery/2022-8-10-ViLT/ViLT-thumbnail.jpg" alt="ViLT：图像-文本多模态Transformer"></a></figure><div class="media-content"><p class="date"><time dateTime="2022-08-11T10:49:23.000Z">2022-08-11</time></p><p class="title"><a href="/2022/08/11/2022-8-10-ViLT/">ViLT：图像-文本多模态Transformer</a></p><p class="categories"><a href="/categories/Multimodality/">Multimodality</a></p></div></article><article class="media"><figure class="media-left"><a class="image" href="/2022/08/02/2022-8-A-new-chapter/"><img src="/gallery/2022-8-A-new-chapter/nus-logo.jpg" alt="新的篇章"></a></figure><div class="media-content"><p class="date"><time dateTime="2022-08-02T12:54:35.000Z">2022-08-02</time></p><p class="title"><a href="/2022/08/02/2022-8-A-new-chapter/">新的篇章</a></p><p class="categories"><a href="/categories/misc/">misc</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">Archives</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2022/08/"><span class="level-start"><span class="level-item">August 2022</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li><li><a class="level is-mobile" href="/archives/2022/07/"><span class="level-start"><span class="level-item">July 2022</span></span><span class="level-end"><span class="level-item tag">8</span></span></a></li><li><a class="level is-mobile" href="/archives/2022/06/"><span class="level-start"><span class="level-item">June 2022</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/archives/2022/03/"><span class="level-start"><span class="level-item">March 2022</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/archives/2022/02/"><span class="level-start"><span class="level-item">February 2022</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/11/"><span class="level-start"><span class="level-item">November 2020</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/10/"><span class="level-start"><span class="level-item">October 2020</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li></ul></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">follow.it</h3><form action="" method="post" target="_blank"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="Subscribe"></div></div></form></div></div></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/logo.png" alt="Qiushi&#039;s Blog" height="28"></a><p class="is-size-7"><span>&copy; 2022 Qiushi Sun</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/QiushiSun"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("en");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="Back to top" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "This website uses cookies to improve your experience.",
+          dismiss: "Got it!",
+          allow: "Allow cookies",
+          deny: "Decline",
+          link: "Learn more",
+          policy: "Cookie Policy",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="Type something..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"Type something...","untitled":"(Untitled)","posts":"Posts","pages":"Pages","categories":"Categories","tags":"Tags"});
+        });</script></body></html>
