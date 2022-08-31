@@ -49,7 +49,7 @@ http://qiushisun.github.io/categories/NLP/CodeRep/
 http://qiushisun.github.io/categories/Multimodality/
 http://qiushisun.github.io/categories/misc/
 http://qiushisun.github.io/categories/DaSE-ECNU/
-http://qiushisun.github.io/categories/DaSE-ECNU/cloud-computing/
 http://qiushisun.github.io/categories/research/
 http://qiushisun.github.io/categories/Research/
+http://qiushisun.github.io/categories/DaSE-ECNU/cloud-computing/
 http://qiushisun.github.io/categories/Research/Writing/
