@@ -345,14 +345,14 @@
   </url>
   
   <url>
-    <loc>http://qiushisun.github.io/tags/research/</loc>
+    <loc>http://qiushisun.github.io/tags/writing/</loc>
     <lastmod>2022-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://qiushisun.github.io/tags/writing/</loc>
+    <loc>http://qiushisun.github.io/tags/research/</loc>
     <lastmod>2022-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -417,7 +417,7 @@
   </url>
   
   <url>
-    <loc>http://qiushisun.github.io/categories/research/</loc>
+    <loc>http://qiushisun.github.io/categories/DaSE-ECNU/cloud-computing/</loc>
     <lastmod>2022-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -431,7 +431,7 @@
   </url>
   
   <url>
-    <loc>http://qiushisun.github.io/categories/DaSE-ECNU/cloud-computing/</loc>
+    <loc>http://qiushisun.github.io/categories/research/</loc>
     <lastmod>2022-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
