@@ -11737,7 +11737,7 @@ body {
   text-align: center;
 }
 .friend-card-item {
-  width: 88%;
+  width: 99.5%;
   border-radius: 2px;
   color: #4a4a4a;
   padding: 0.5rem;
@@ -11754,7 +11754,7 @@ body {
   width: 5rem !important;
   height: 5rem !important;
   margin: 0 !important;
-  margin-right: 0.2em !important;
+  margin-right: 0.7em !important;
   border-radius: 40px;
 }
 .friend-card-item img {

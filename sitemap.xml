@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://qiushisun.github.io/showcase/index.html</loc>
+    
+    <lastmod>2022-09-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://qiushisun.github.io/friend/index.html</loc>
     
     <lastmod>2022-08-31</lastmod>
@@ -282,14 +291,14 @@
   </url>
   
   <url>
-    <loc>http://qiushisun.github.io/tags/Blog/</loc>
+    <loc>http://qiushisun.github.io/tags/ML-System/</loc>
     <lastmod>2022-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://qiushisun.github.io/tags/ML-System/</loc>
+    <loc>http://qiushisun.github.io/tags/Blog/</loc>
     <lastmod>2022-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -310,14 +319,14 @@
   </url>
   
   <url>
-    <loc>http://qiushisun.github.io/tags/QA/</loc>
+    <loc>http://qiushisun.github.io/tags/misc/</loc>
     <lastmod>2022-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://qiushisun.github.io/tags/misc/</loc>
+    <loc>http://qiushisun.github.io/tags/QA/</loc>
     <lastmod>2022-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -345,14 +354,14 @@
   </url>
   
   <url>
-    <loc>http://qiushisun.github.io/tags/writing/</loc>
+    <loc>http://qiushisun.github.io/tags/research/</loc>
     <lastmod>2022-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://qiushisun.github.io/tags/research/</loc>
+    <loc>http://qiushisun.github.io/tags/writing/</loc>
     <lastmod>2022-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -375,14 +384,14 @@
   </url>
   
   <url>
-    <loc>http://qiushisun.github.io/categories/Blog/</loc>
+    <loc>http://qiushisun.github.io/categories/ML-System/</loc>
     <lastmod>2022-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://qiushisun.github.io/categories/ML-System/</loc>
+    <loc>http://qiushisun.github.io/categories/Blog/</loc>
     <lastmod>2022-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -417,7 +426,7 @@
   </url>
   
   <url>
-    <loc>http://qiushisun.github.io/categories/Research/</loc>
+    <loc>http://qiushisun.github.io/categories/DaSE-ECNU/cloud-computing/</loc>
     <lastmod>2022-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -431,7 +440,7 @@
   </url>
   
   <url>
-    <loc>http://qiushisun.github.io/categories/DaSE-ECNU/cloud-computing/</loc>
+    <loc>http://qiushisun.github.io/categories/Research/</loc>
     <lastmod>2022-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
