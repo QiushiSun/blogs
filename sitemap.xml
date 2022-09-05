@@ -272,13 +272,6 @@
 
   
   <url>
-    <loc>http://qiushisun.github.io/tags/TeX/</loc>
-    <lastmod>2022-09-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://qiushisun.github.io/tags/PTMs/</loc>
     <lastmod>2022-09-05</lastmod>
     <changefreq>weekly</changefreq>
@@ -300,7 +293,7 @@
   </url>
   
   <url>
-    <loc>http://qiushisun.github.io/tags/Blog/</loc>
+    <loc>http://qiushisun.github.io/tags/TeX/</loc>
     <lastmod>2022-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -314,7 +307,7 @@
   </url>
   
   <url>
-    <loc>http://qiushisun.github.io/tags/QA/</loc>
+    <loc>http://qiushisun.github.io/tags/Blog/</loc>
     <lastmod>2022-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -335,6 +328,13 @@
   </url>
   
   <url>
+    <loc>http://qiushisun.github.io/tags/AutoML/</loc>
+    <lastmod>2022-09-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://qiushisun.github.io/tags/misc/</loc>
     <lastmod>2022-09-05</lastmod>
     <changefreq>weekly</changefreq>
@@ -343,6 +343,13 @@
   
   <url>
     <loc>http://qiushisun.github.io/tags/blog/</loc>
+    <lastmod>2022-09-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://qiushisun.github.io/tags/QA/</loc>
     <lastmod>2022-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -376,21 +383,7 @@
     <priority>0.2</priority>
   </url>
   
-  <url>
-    <loc>http://qiushisun.github.io/tags/AutoML/</loc>
-    <lastmod>2022-09-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
 
-  
-  <url>
-    <loc>http://qiushisun.github.io/categories/TeX/</loc>
-    <lastmod>2022-09-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
   
   <url>
     <loc>http://qiushisun.github.io/categories/NLP/</loc>
@@ -400,7 +393,7 @@
   </url>
   
   <url>
-    <loc>http://qiushisun.github.io/categories/Blog/</loc>
+    <loc>http://qiushisun.github.io/categories/TeX/</loc>
     <lastmod>2022-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -421,7 +414,21 @@
   </url>
   
   <url>
+    <loc>http://qiushisun.github.io/categories/Blog/</loc>
+    <lastmod>2022-09-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://qiushisun.github.io/categories/Multimodality/</loc>
+    <lastmod>2022-09-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://qiushisun.github.io/categories/AutoML/</loc>
     <lastmod>2022-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -464,13 +471,6 @@
   
   <url>
     <loc>http://qiushisun.github.io/categories/Research/Writing/</loc>
-    <lastmod>2022-09-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://qiushisun.github.io/categories/AutoML/</loc>
     <lastmod>2022-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
