@@ -1,3 +1,4 @@
+http://qiushisun.github.io/2022/09/09/2022-9-9-Black-Box-Tuning/
 http://qiushisun.github.io/2022/09/04/2022-9-3-Autogluon-1/
 http://qiushisun.github.io/showcase/index.html
 http://qiushisun.github.io/friend/index.html
@@ -44,6 +45,8 @@ http://qiushisun.github.io/tags/cloud-computing/
 http://qiushisun.github.io/tags/DaSE-ECNU/
 http://qiushisun.github.io/tags/research/
 http://qiushisun.github.io/tags/writing/
+http://qiushisun.github.io/tags/Optimization/
+http://qiushisun.github.io/tags/Prompt/
 http://qiushisun.github.io/categories/NLP/
 http://qiushisun.github.io/categories/TeX/
 http://qiushisun.github.io/categories/ML-System/
@@ -57,3 +60,4 @@ http://qiushisun.github.io/categories/DaSE-ECNU/cloud-computing/
 http://qiushisun.github.io/categories/research/
 http://qiushisun.github.io/categories/Research/
 http://qiushisun.github.io/categories/Research/Writing/
+http://qiushisun.github.io/categories/Prompt-Learning/
