@@ -290,6 +290,13 @@
 
   
   <url>
+    <loc>http://qiushisun.github.io/tags/ML-System/</loc>
+    <lastmod>2023-05-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://qiushisun.github.io/tags/PTMs/</loc>
     <lastmod>2023-05-06</lastmod>
     <changefreq>weekly</changefreq>
@@ -318,14 +325,14 @@
   </url>
   
   <url>
-    <loc>http://qiushisun.github.io/tags/ML-System/</loc>
+    <loc>http://qiushisun.github.io/tags/Blog/</loc>
     <lastmod>2023-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://qiushisun.github.io/tags/Blog/</loc>
+    <loc>http://qiushisun.github.io/tags/Optimization/</loc>
     <lastmod>2023-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -346,13 +353,6 @@
   </url>
   
   <url>
-    <loc>http://qiushisun.github.io/tags/QA/</loc>
-    <lastmod>2023-05-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://qiushisun.github.io/tags/misc/</loc>
     <lastmod>2023-05-06</lastmod>
     <changefreq>weekly</changefreq>
@@ -360,7 +360,14 @@
   </url>
   
   <url>
-    <loc>http://qiushisun.github.io/tags/blog/</loc>
+    <loc>http://qiushisun.github.io/tags/QA/</loc>
+    <lastmod>2023-05-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://qiushisun.github.io/tags/Prompt/</loc>
     <lastmod>2023-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -374,14 +381,7 @@
   </url>
   
   <url>
-    <loc>http://qiushisun.github.io/tags/Optimization/</loc>
-    <lastmod>2023-05-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://qiushisun.github.io/tags/Prompt/</loc>
+    <loc>http://qiushisun.github.io/tags/blog/</loc>
     <lastmod>2023-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -418,6 +418,13 @@
 
   
   <url>
+    <loc>http://qiushisun.github.io/categories/ML-System/</loc>
+    <lastmod>2023-05-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://qiushisun.github.io/categories/NLP/</loc>
     <lastmod>2023-05-06</lastmod>
     <changefreq>weekly</changefreq>
@@ -432,14 +439,14 @@
   </url>
   
   <url>
-    <loc>http://qiushisun.github.io/categories/ML-System/</loc>
+    <loc>http://qiushisun.github.io/categories/Blog/</loc>
     <lastmod>2023-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://qiushisun.github.io/categories/Blog/</loc>
+    <loc>http://qiushisun.github.io/categories/Code-Representation/</loc>
     <lastmod>2023-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -467,13 +474,6 @@
   </url>
   
   <url>
-    <loc>http://qiushisun.github.io/categories/AutoML/</loc>
-    <lastmod>2023-05-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://qiushisun.github.io/categories/Prompt-Learning/</loc>
     <lastmod>2023-05-06</lastmod>
     <changefreq>weekly</changefreq>
@@ -481,14 +481,14 @@
   </url>
   
   <url>
-    <loc>http://qiushisun.github.io/categories/DaSE-ECNU/</loc>
+    <loc>http://qiushisun.github.io/categories/AutoML/</loc>
     <lastmod>2023-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://qiushisun.github.io/categories/DaSE-ECNU/cloud-computing/</loc>
+    <loc>http://qiushisun.github.io/categories/DaSE-ECNU/</loc>
     <lastmod>2023-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -509,14 +509,14 @@
   </url>
   
   <url>
-    <loc>http://qiushisun.github.io/categories/Research/Writing/</loc>
+    <loc>http://qiushisun.github.io/categories/DaSE-ECNU/cloud-computing/</loc>
     <lastmod>2023-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://qiushisun.github.io/categories/Code-Representation/</loc>
+    <loc>http://qiushisun.github.io/categories/Research/Writing/</loc>
     <lastmod>2023-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
